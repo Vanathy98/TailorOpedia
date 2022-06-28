@@ -1,1 +1,2 @@
-# TailorOpedia
+# tailopedia
+connect tailors with people

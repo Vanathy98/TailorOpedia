@@ -1,0 +1,79 @@
+.measure {
+  background: $gray-100;
+  .measure-nav {
+    background: $light;
+    padding: 10px;
+    .items {
+      border-radius: 8px;
+      &:hover {
+        background: $gray-200;
+        .number {
+          background: $primary;
+          color: $light;
+        }
+      }
+      .number {
+        background: #edd9f6;
+        height: 50px;
+        width: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: $dark;
+        border-radius: 8px;
+      }
+      h4 {
+        font-weight: 500;
+        font-size: 16px;
+      }
+      p {
+        font-size: 16px;
+        color: $primary;
+      }
+    }
+    .active {
+      background: $gray-200;
+      .number {
+        background: $primary;
+        color: $light;
+      }
+    }
+  }
+
+  .inputGroup {
+    position: relative;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    label {
+      padding: 20px;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      color: $dark;
+      cursor: pointer;
+      border: 2px solid $light;
+      transition: 0.2s all;
+      img {
+        height: 120px;
+        width: 120px;
+      }
+      p {
+        margin-top: 20px;
+        font-size: 16px;
+        color: $dark;
+      }
+      &:hover {
+        border: 2px solid $primary;
+      }
+    }
+    input:checked ~ label {
+      border: 2px solid $primary;
+      background: #edd9f6;
+    }
+    input[type="radio"] {
+      position: absolute;
+      cursor: pointer;
+      visibility: hidden;
+    }
+  }
+}
