@@ -1,3 +1,8 @@
+<?php
+include 'connection.php';
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +18,7 @@
 </head>
 
 <body>
+
 <!-- ========Hero Section=========================================== -->
     <header>
         <div class="container py-2">
@@ -44,25 +50,34 @@
                             </a>
                         </div>
                         <div class="ms-md-5">
-                            <a href="signin.html" class="button button-outline">Sign in</a>
-                            <a href="auth.html" class="button button-secondary ms-2">Get Started</a>
+                           
+                              
+                            <?php
+                               
+                               if(isset($_SESSION["loggedin"]) ) {
+                                echo "    <div class='dropdown text-end'>
+                                <a href='#' class='d-block link-dark text-decoration-none dropdown-toggle' id='dropdownUser1'
+                                    data-bs-toggle='dropdown' aria-expanded='false'>
+                                    <img src='https://github.com/mdo.png' alt='mdo' width='32' height='32'
+                                        class='rounded-circle'>
+                                </a>".$_GET['name']."
+                                <ul class='dropdown-menu text-small' aria-labelledby='dropdownUser1'>
+                                    <li><a class='dropdown-item' href='#'>New project...</a></li>
+                                    <li><a class='dropdown-item' href='#'>Settings</a></li>
+                                    <li><a class='dropdown-item' href='#'>Profile</a></li>
+                                    <li>
+                                        <hr class='dropdown-divider'>
+                                    </li>
+                                    <li><a class='dropdown-item' href='signout.php'>Sign out</a></li>
+                                </ul>
+                            </div>";
+                                }else{
+                                    echo" <a href='signin.php' class='button button-outline'>Sign in</a>
+                                    <a href='auth.php' class='button button-secondary ms-2'>Get Started</a>";
+                                    
+                                }
+                            ?>
                         </div>
-                        <!-- <div class="dropdown text-end">
-                            <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32"
-                                    class="rounded-circle">
-                            </a>
-                            <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                                <li><a class="dropdown-item" href="#">New project...</a></li>
-                                <li><a class="dropdown-item" href="#">Settings</a></li>
-                                <li><a class="dropdown-item" href="#">Profile</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="#">Sign out</a></li>
-                            </ul>
-                        </div> -->
                     </div>
                 </div>
             </nav>
@@ -111,49 +126,55 @@
                     <h2>Popular <span>services</span></h2>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card-tile green">
-                        <h2>Women <br> Collections</h2>
-                        <img class="women-img" src="assets/image/women.png" alt="">
-                        <p>35+ Tailors</p>
-                        <div class="avatar">
-                            <img src="assets/image/avatar/avatar-1.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-2.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-14.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-18.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-12.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-6.jpg" alt="">
+                    <a href="category.php">
+                        <div class="card-tile green">
+                            <h2>Women <br> Collections</h2>
+                            <img class="women-img" src="assets/image/women.png" alt="">
+                            <p>35+ Tailors</p>
+                            <div class="avatar">
+                                <img src="assets/image/avatar/avatar-1.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-2.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-14.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-18.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-12.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-6.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card-tile red">
-                        <h2>Men <br> Collections</h2>
-                        <img class="women-img" src="assets/image/men.png" alt="">
-                        <p>48+ Tailors</p>
-                        <div class="avatar">
-                            <img src="assets/image/avatar/avatar-1.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-2.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-14.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-18.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-12.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-6.jpg" alt="">
+                    <a href="category.php">
+                        <div class="card-tile red">
+                            <h2>Men <br> Collections</h2>
+                            <img class="women-img" src="assets/image/men.png" alt="">
+                            <p>48+ Tailors</p>
+                            <div class="avatar">
+                                <img src="assets/image/avatar/avatar-1.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-2.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-14.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-18.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-12.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-6.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
                 <div class="col-lg-4">
-                    <div class="card-tile yellow">
-                        <h2>Kids <br> Collections</h2>
-                        <img class="women-img" src="assets/image/kids.png" alt="">
-                        <p>18+ Tailors</p>
-                        <div class="avatar">
-                            <img src="assets/image/avatar/avatar-1.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-2.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-14.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-18.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-12.jpg" alt="">
-                            <img src="assets/image/avatar/avatar-6.jpg" alt="">
+                    <a href="category.php">
+                        <div class="card-tile yellow">
+                            <h2>Kids <br> Collections</h2>
+                            <img class="women-img" src="assets/image/kids.png" alt="">
+                            <p>18+ Tailors</p>
+                            <div class="avatar">
+                                <img src="assets/image/avatar/avatar-1.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-2.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-14.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-18.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-12.jpg" alt="">
+                                <img src="assets/image/avatar/avatar-6.jpg" alt="">
+                            </div>
                         </div>
-                    </div>
+                    </a>
                 </div>
             </div>
         </div>

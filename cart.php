@@ -53,12 +53,12 @@
                             <img class="ms-md-3" src="assets/image/icons/arrow-down.svg" alt="">
                         </div>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li><a class="dropdown-item" href="#bio">Profile</a></li>
+                            <li><a class="dropdown-item" href="signOut.php">sign out</a></li>
                             <li>
                                 <hr class="dropdown-divider">
                             </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            <li><a class="dropdown-item" href="index.php">About us</a></li>
                         </ul>
                     </div>
                 </div>

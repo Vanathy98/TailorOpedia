@@ -19,23 +19,23 @@
                 <div class="sidebar position-sticky sticky-top w-100">&nbsp;</div>
             </div>
             <div class="col-lg-9 ">
-                <p class="header">Not a member? <a href="signin.html">Sign In</a></p>
+                <p class="header">Not a member? <a href="signin.php">Sign In</a></p>
                 <div class="body">
                     <h3>Create Account</h3>
                     <p class="my-4">what do you want to do?</p>
-                    <form action="#">
+                    <form action="userIdentification.php" method="post">
                         <div class="inputGroup">
-                            <input type="radio" value="hire" id="option1" name="check" onclick="onlyOne(this)" />
+                            <input type="radio" value="CUSTOMER" id="option1" name="check" onclick="onlyOne(this)" />
                             <label for="option1">I want to hire a tailor</label>
                         </div>
                         <div class="inputGroup">
-                            <input type="radio" value="work" id="option2" name="check" onclick="onlyOne(this)" />
+                            <input type="radio" value="TAILOR" id="option2" name="check" onclick="onlyOne(this)" />
                             <label for="option2">I want to work as a tailor</label>
                         </div>
                         <!-- <input type="text" placeholder="Full name"> -->
                         <div class="d-flex justify-content-end my-5">
                             <a href="./" class="button w-50">Back</a>
-                            <a href="signup.html" class="button w-50 button-primary">Countinue</a>
+                            <input type =  "submit" id = "btn" value = "Countinue" class="button w-50 button-primary"/>
                         </div>
                     </form>
                 </div>
@@ -45,5 +45,6 @@
 
     <script src="src/js/script.js"></script>
 </body>
+
 
 </html>

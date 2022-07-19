@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Details Page</title>
+    <title>Add to cart Page</title>
     <!-- Bootstrap-css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- main css -->
     <link rel="stylesheet" href="src/css/main.css">
 </head>
 
-<body class="details">
-    <div class="container-fluid p-0">
+<body class="measure">
+<div class="container-fluid p-0">
         <nav class="navbar bg-dark navbar-expand-md navbar-dark mb-4">
             <div class="container p-0">
                 <a class="navbar-brand logo" href="#">Tailor <span>Opedia</span></a>
@@ -65,83 +65,13 @@
             </div>
         </nav>
     </div>
-    <div class="container p-0">
-        <h3 class="pt-5">Pipping Attached Flared Sleeve Top Pipping <br> Attached Flared Sleeve Top</h3>
-        <div class="row view-product">
-            <div class="col-lg-8">
-                <img src="assets/image/detail-image.jpg" alt="detail-image.jpg">
-                <div class="row bg-white p-3 mt-5 mx-0 rounded-10">
-                    <div class="col-lg-7 my-3">
-                        <h4 class="mb-3">Product Story</h4>
-                        <p>This Product is of one of many design kinds we offer. Flat design concepts are one of our
-                            fortes. For the logo to be timeless it doesn’t need to be with complex</p>
-                    </div>
-                    <div class="col-lg-5 my-3">
-                        <h4 class="mb-3">Material information</h4>
-                        <p>Lising: 100% Polyester</p>
-                        <p>Shell: 100% Polyester</p>
-                    </div>
-                    <div class="col-lg-7 my-3">
-                        <h4 class="mb-3">Product highlights</h4>
-                        <p>Relaxed Fit</p>
-                        <p>Full Zip closure with stand up collar</p>
-                        <p>Dual side pockets</p>
-                        <p>Embroidered Badge at left chest</p>
-                        <p>Standard fit has a relaxed, easy feel</p>
-                    </div>
-                    <div class="col-lg-5 my-3">
-                        <h4 class="mb-3">Product Details</h4>
-                        <p>Cool Iron</p>
-                        <p>Do Not Bleach</p>
-                        <p>Do Not Dry Clean</p>
-                        <p>Machine Wash in Cool Water</p>
-                        <p>Tumble Dry At Low Temperature</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="d-flex align-items-center bg-white p-4 rounded-10">
-                    <img src="assets/image/avatar/user.png"
-                        style="height:60px; width: 60px;background: #ffbc85; margin-right: 20px;" alt="">
-                    <div class="ms-2">
-                        <h3>Aormac Thomas</h3>
-                        <p>Professional Fashion Designer </p>
-                    </div>
-                </div>
-                <div class="bg-white p-4 my-4 rounded-10">
-                    <div class="d-flex justify-content-between mb-3">
-                        <p>From</p>
-                        <p><span>Jaffna Point pedro</span></p>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <p>Avg. response time</p>
-                        <p><span>2 Hours</span></p>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <p>Last delivery</p>
-                        <p><span>30 Minutes ago</span></p>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <p>From</p>
-                        <p><span>Jaffna Point pedro</span></p>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <p>Finised job</p>
-                        <p><span>2461 Oders</span></p>
-                    </div>
-                    <div class="d-flex justify-content-between mb-3">
-                        <p>Total reviews</p>
-                        <p><span class="text-warning">★ 4.9 </span>(2460)</p>
-                    </div>
 
-                    <div class="button button-primary py-3 mt-5 mb-3">Hire Thomas</div>
-                    <div class="button button-outline py-3">View portfolio</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <h2>Measurments</h2>
+    <br>
+    <a href="AddToCart.php" class="button w-50 button-primary">Submit measurments</a>
+
     <script src="src/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
 
+</body>
 </html>
