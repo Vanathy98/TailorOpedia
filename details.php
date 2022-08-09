@@ -20,6 +20,29 @@ session_start();
     <div class="container-fluid p-0">
         <nav class="navbar bg-dark navbar-expand-md navbar-dark mb-4">
             <div class="container p-0">
+            <?php   
+                        $id = $_GET['id'];
+                        $sql = "SELECT completed_product.id AS dress_id,
+                        completed_product.name AS dress_name,
+                        completed_product.cost AS dress_cost,
+                        completed_product.name AS dress_name,
+                        completed_product.uploaded_on AS uploaded_on,
+                        completed_product.img_name AS img_name,
+                        completed_product.tai_id AS tai_id,
+                        user.fullname AS fullname,
+                        user.id AS user_id
+                        FROM completed_product
+                        LEFT JOIN user
+                        ON completed_product.tai_id = user.id WHERE completed_product.id = $id";
+                        $res = mysqli_query($conn,$sql);
+                        $row=mysqli_fetch_array($res);
+                        $name = $row['dress_name'];
+                        $cost=$row['dress_cost'];
+                        $uploaded_on = $row['uploaded_on'];
+                        $img=$row['img_name'];
+                        $tailor=$row['fullname'];
+                        $tailor_id=$row['tai_id']
+                ?>
                 <a class="navbar-brand logo" href="#">Tailor <span>Opedia</span></a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
@@ -70,10 +93,10 @@ session_start();
         </nav>
     </div>
     <div class="container p-0">
-        <h3 class="pt-5">Pipping Attached Flared Sleeve Top Pipping <br> Attached Flared Sleeve Top</h3>
+        <h3 class="pt-5"><?php echo $name; ?></h3>
         <div class="row view-product">
             <div class="col-lg-8">
-                <img src="assets/image/detail-image.jpg" alt="detail-image.jpg">
+                <img src="assets/image/dress/<?php echo $img;?>" alt="detail-image.jpg">
                 <div class="row bg-white p-3 mt-5 mx-0 rounded-10">
                     <div class="col-lg-7 my-3">
                         <h4 class="mb-3">Product Story</h4>
@@ -108,7 +131,7 @@ session_start();
                     <img src="assets/image/avatar/user.png"
                         style="height:60px; width: 60px;background: #ffbc85; margin-right: 20px;" alt="">
                     <div class="ms-2">
-                        <h3>Aormac Thomas</h3>
+                        <h3><?php echo $tailor; ?></h3>
                         <p>Professional Fashion Designer </p>
                     </div>
                 </div>
@@ -123,7 +146,7 @@ session_start();
                     </div>
                     <div class="d-flex justify-content-between mb-3">
                         <p>Last delivery</p>
-                        <p><span>30 Minutes ago</span></p>
+                        <p><span><?php echo $uploaded_on; ?></span></p>
                     </div>
                     <div class="d-flex justify-content-between mb-3">
                         <p>From</p>
@@ -138,7 +161,7 @@ session_start();
                         <p><span class="text-warning">★ 4.9 </span>(2460)</p>
                     </div>
 
-                    <a href="measurment.php"><div class="button button-primary py-3 mt-5 mb-3">Hire Thomas</div></a>
+                    <a href="measurment.php?id=<?php echo $tailor_id;?>&dress_id=<?php echo $id;?>"><div class="button button-primary py-3 mt-5 mb-3">Hire <?php echo $tailor; ?></div></a>
                     <a href="tailorProfile.php"><div class="button button-outline py-3">View portfolio</div></a>
                 </div>
             </div>

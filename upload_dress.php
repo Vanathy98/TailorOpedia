@@ -79,7 +79,7 @@
                     <input type="text" name='name' placeholder="name">
                     <input type="number" name='cost' placeholder="cost">
                     <input type="file"  name='imagefile' placeholder="image">
-                    <input type="hidden"  name='tailorid' value="123" >
+                    <input type="hidden"  name='tailorid' value="<?php echo $_SESSION['id']; ?>" >
                     <input type="hidden"  id="date" name='up_time' value="time" >
                     <input type="submit" value="upload">
                 </form>

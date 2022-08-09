@@ -1,3 +1,7 @@
+<?php
+include 'connection.php';
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -49,7 +53,7 @@
                         <div style="cursor: pointer; " class="d-flex align-items-center" id="dropdownMenuButton1"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             <img src="https://github.com/mdo.png" alt="mdo" width="44" height="44" class="rounded">
-                            <p class="ms-md-3 text-white">Michel Erving</p>
+                            <p class="ms-md-3 text-white"><?php  echo  $_SESSION['name'] ?></p>
                             <img class="ms-md-3" src="assets/image/icons/arrow-down.svg" alt="">
                         </div>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
@@ -408,7 +412,7 @@
                         <div class="d-flex justify-content-end" >
                             <a class="button" onclick="plusSlides(-1)" >Previous</a>
                             <a href="size.php" class="button" >Give measurement</a>
-                            <a href="cartart.php" class="button button-primary px-5">Add to cart</a>
+                            <a href="cart.php?id=<?php echo $_GET['id']?>&dress_id=<?php echo $_GET['dress_id']?>" class="button button-primary px-5">Add to cart</a>
                         </div>
                     </div>
                 </form>

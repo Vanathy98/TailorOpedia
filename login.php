@@ -14,13 +14,13 @@
         //customer um login pannanum 
         $result = mysqli_query($conn, $sql);  
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);  
-        $username=$row['fullname'];
         $count = mysqli_num_rows($result);  
           
         if($count == 1){  
            // echo"crt";
             $_SESSION["loggedin"]=true;
             $_SESSION['name']=$row['fullname'];
+            $_SESSION['id']=$row['id'];
             header('location: index.php?name='.urlencode($row['fullname']));
 
             
