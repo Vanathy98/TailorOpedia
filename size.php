@@ -72,7 +72,7 @@ session_start();
 
     <h2>Measurments</h2>
     <br>
-    <a href="AddToCart.php" class="button w-50 button-primary">Submit measurments</a>
+    <a href="cart.php" class="button w-50 button-primary">Submit measurments</a>
 
     <script src="src/js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>

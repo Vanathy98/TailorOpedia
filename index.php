@@ -21,6 +21,7 @@ session_start();
 
 <!-- ========Hero Section=========================================== -->
     <header>
+        <!-- ========Navigation bar=========================================== -->
         <div class="container py-2">
             <nav class="navbar navbar-expand-md navbar-light mb-4">
                 <div class="container p-0">
@@ -50,7 +51,7 @@ session_start();
                             </a>
                         </div>
                         <div class="ms-md-5">
-                           
+                            <!-- ========php code for appearing user name if and only if user is logged in=========================================== -->
                               
                             <?php
                                
@@ -82,6 +83,7 @@ session_start();
                 </div>
             </nav>
         </div>
+        <!-- ========below  part of Navigation bar=========================================== -->
         <div class="container px-2 hero">
             <div class="row">
                 <div class="col-lg-7 mt-5">
