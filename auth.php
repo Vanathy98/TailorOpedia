@@ -21,6 +21,7 @@ session_start();
         <div class="row">
             <div class="col-lg-3 p-0 position-relative d-none d-lg-block">
                 <div class="sidebar position-sticky sticky-top w-100">&nbsp;</div>
+                
             </div>
             <div class="col-lg-9 ">
                 <p class="header">Not a member? <a href="signin.php">Sign In</a></p>

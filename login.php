@@ -21,6 +21,7 @@
             $_SESSION["loggedin"]=true;
             $_SESSION['name']=$row['fullname'];
             $_SESSION['id']=$row['id'];
+            $_SESSION['cemail']=$row['email'];
             header('location: index.php?name='.urlencode($row['fullname']));
 
             

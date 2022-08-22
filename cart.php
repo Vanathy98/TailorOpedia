@@ -87,7 +87,6 @@ session_start();
                     $sql = "SELECT completed_product.id AS dress_id,
                     completed_product.name AS dress_name,
                     completed_product.cost AS dress_cost,
-                    completed_product.name AS dress_name,
                     completed_product.uploaded_on AS uploaded_on,
                     completed_product.img_name AS img_name,
                     completed_product.tai_id AS tai_id,
@@ -180,7 +179,7 @@ session_start();
                         <div class="row gy-5 gx-5">
                             <div class="col-lg-6">
                                 <label for="firstName" class="form-label" >First Name</label>
-                                <input type="text" placeholder="First Name" value="<?php echo $tailor;?>">
+                                <input type="text" placeholder="First Name" value="<?php echo $_SESSION['name'];?>">
                             </div>
                             <div class="col-lg-6">
                                 <label for="lastName" class="form-label">Last Name</label>
@@ -192,7 +191,7 @@ session_start();
                             </div>
                             <div class="col-lg-6">
                                 <label for="eamil" class="form-label">Email</label>
-                                <input type="text" placeholder="Email" value="<?php echo $email;?>">
+                                <input type="text" placeholder="Email" value="<?php echo  $_SESSION['cemail'];?>">
                             </div>
                         </div>
                    
